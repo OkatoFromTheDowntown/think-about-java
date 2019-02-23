@@ -1,6 +1,6 @@
 package main.java.singleton;
 
-public class Singleton1 {
+public class Singleton1 extends Singleton {
     /*
         Lazy Initialize: Yes;
         Thread Safe: No;
@@ -10,7 +10,7 @@ public class Singleton1 {
     private static Singleton1 instance;
 
     private Singleton1() {
-        System.out.println("Method: Singleton1()");
+        System.out.println("Constructor Method: Singleton1()");
     }
 
     public static Singleton1 getInstance() {

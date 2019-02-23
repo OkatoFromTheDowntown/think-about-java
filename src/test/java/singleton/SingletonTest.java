@@ -1,8 +1,6 @@
 package test.java.singleton;
 
-import main.java.singleton.Singleton1;
-import main.java.singleton.Singleton2;
-import main.java.singleton.Singleton3;
+import main.java.singleton.*;
 
 public class SingletonTest {
     public static void main(String[] args) {
@@ -13,6 +11,18 @@ public class SingletonTest {
 
         Singleton3 singleton3 = Singleton3.getInstance();
 
+        Singleton4 singleton4 = Singleton4.getInstance();
+
+        Singleton5 singleton5 = Singleton5.getInstance();
+
+        Singleton6 singleton6 = Singleton6.INSTANCE;
+
+        singleton1.displaySelf();
+        singleton2.displaySelf();
+        singleton3.displaySelf();
+        singleton4.displaySelf();
+        singleton5.displaySelf();
+        singleton6.displaySelf();
 
     }
 }
