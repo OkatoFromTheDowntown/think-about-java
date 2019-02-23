@@ -1,4 +1,5 @@
-.vscode
 *.iml
-./out
-./idea
+.idea/
+.vscode/
+out/
+build/
