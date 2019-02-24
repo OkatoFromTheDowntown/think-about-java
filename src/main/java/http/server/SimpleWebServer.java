@@ -11,7 +11,7 @@ public class SimpleWebServer {
         OutputStream out = null;
         try {
             ServerSocket serverSocket = new ServerSocket(3001, 3);
-            System.out.println("Server has been set up at port 3001");
+            System.out.println("Server has been set up at port " + serverSocket.getLocalPort());
             while (true) {
                 socket = serverSocket.accept();
                 System.out.println("Get the connection");
