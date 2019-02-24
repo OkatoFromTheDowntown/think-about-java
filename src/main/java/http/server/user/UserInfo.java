@@ -1,4 +1,4 @@
-package main.java.http.server;
+package main.java.http.server.user;
 
 import java.io.Serializable;
 

@@ -1,6 +1,5 @@
-package main.java.http.server;
+package main.java.http.server.user;
 
-import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;

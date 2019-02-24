@@ -1,4 +1,4 @@
-package main.java.http.server;
+package main.java.http.server.file;
 
 import java.io.*;
 import java.net.ServerSocket;
