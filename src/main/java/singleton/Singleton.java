@@ -28,6 +28,12 @@ public class Singleton implements Whoiam, MagikarpInfo {
 
     private final static String NO_FOUND = "NoFound";
 
+
+    // Implement the MagikarpInfo in Singleton class,
+    // it make something ridiculous.
+    // but if create the MagikarpInfo to a class and,
+    // extended from it. Well, that's weired, cause there's
+    // no relationship in Singleton and Magikarp.
     private String getInfo(String target) {
 
         Class clazz = this.getClass();
