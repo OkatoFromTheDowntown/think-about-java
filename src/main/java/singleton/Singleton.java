@@ -28,9 +28,8 @@ public class Singleton implements Whoiam, MagikarpInfo {
 
     private final static String NO_FOUND = "NoFound";
 
-
     // Implement the MagikarpInfo in Singleton class,
-    // it make something ridiculous.
+    // i think it makes something ridiculous.
     // but if create the MagikarpInfo to a class and,
     // extended from it. Well, that's weired, cause there's
     // no relationship in Singleton and Magikarp.
@@ -40,7 +39,6 @@ public class Singleton implements Whoiam, MagikarpInfo {
 
         boolean hasMagikarp = clazz.isAnnotationPresent(Magikarp.class);
 
-
         String[] infos = new String[2];
 
         if (hasMagikarp) {
@@ -48,11 +46,9 @@ public class Singleton implements Whoiam, MagikarpInfo {
             infos[0] = info.author();
             infos[1] = info.createDate();
 
-
         } else {
             target = Singleton.NO_FOUND;
         }
-
 
         switch (target) {
             case Singleton.AUTHOR:
