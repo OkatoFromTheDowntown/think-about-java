@@ -2,8 +2,6 @@ package test.java.singleton;
 
 import main.java.singleton.*;
 
-import java.io.DataInputStream;
-
 public class SingletonTest {
     public static void main(String[] args) {
 //        Singleton1 singletonError = new Singleton1();
