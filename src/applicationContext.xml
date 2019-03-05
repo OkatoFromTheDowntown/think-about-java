@@ -33,7 +33,16 @@
         userService.setName("Init from xml");
     -->
     <bean id="userService" class="main.java.service.UserService">
-        <property name="name" value="Init from xml" />
+        <property name="name" value="xml"/>
+        <property name="userInfo" ref="userInfo"/>
+    </bean>
+    <!--
+        UserInfo userInfo = new UserInfo();
+        userInfo.setAge(13);
+        userService.setUserInfo(userInfo);
+    -->
+    <bean id="userInfo" class="main.java.service.UserInfo">
+        <property name="age" value="13"/>
     </bean>
 
 </beans>
