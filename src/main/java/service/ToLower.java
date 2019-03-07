@@ -4,6 +4,10 @@ public class ToLower implements ChangeLetter {
 
     private String letter;
 
+    public ToLower() {
+        System.out.println("LowerCase");
+    }
+
     @Override
     public String change() {
         return letter.toLowerCase();
