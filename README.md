@@ -15,3 +15,4 @@
 http://www.tutorialspoint.com/spring/spring_mvc_hello_world_example.htm
 
 なぜこのrepositoryを作るかと、JAVAを改めて学びたいから。
+きっと、いつか俺のJAVAが俺のJavaScriptのように。
