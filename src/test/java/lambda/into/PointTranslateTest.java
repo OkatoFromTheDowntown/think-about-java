@@ -1,12 +1,14 @@
 package test.java.lambda.into;
 
 
-import main.java.lambda.into.PointList;
-import main.java.lambda.into.TranslateBy;
-import main.java.lambda.into.TranslateByX;
-import main.java.lambda.into.TranslateByY;
+import main.java.lambda.intro.PointList;
+import main.java.lambda.intro.TranslateBy;
+import main.java.lambda.intro.TranslateByX;
+import main.java.lambda.intro.TranslateByY;
 
 import java.awt.*;
+import java.util.ArrayList;
+import java.util.function.Consumer;
 
 public class PointTranslateTest {
     public static void main(String... args) {
@@ -36,6 +38,18 @@ public class PointTranslateTest {
         points.forEach(new TranslateBy(-1, -2));
 
         points.printForEachPoint();
+
+        System.out.println("Consumer.accept");
+
+        ArrayList<Point> pointList = points;
+        pointList.forEach(new Consumer<Point>() {
+            @Override
+            public void accept(Point point) {
+                point.translate(10, 10);
+            }
+        });
+        pointList.forEach(point -> System.out.println(point));
+
 
     }
 }

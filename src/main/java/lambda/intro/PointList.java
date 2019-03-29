@@ -1,4 +1,4 @@
-package main.java.lambda.into;
+package main.java.lambda.intro;
 
 import java.awt.*;
 import java.util.ArrayList;
