@@ -16,6 +16,7 @@ public class AlarmTest {
 
         AlarmTest test = new AlarmTest();
 
+        // try to testing the superclass and subclass
         A a = test.new A();
         B b = test.new B();
         A c = test.new A();
