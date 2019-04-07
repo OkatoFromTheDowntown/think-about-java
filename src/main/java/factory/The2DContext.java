@@ -7,6 +7,6 @@ public class The2DContext extends Context {
     }
 
     @Override
-    public void setContextStyle() {
+    protected void setContextStyle() {
     }
 }

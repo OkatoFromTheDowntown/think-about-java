@@ -7,6 +7,6 @@ public class The3DContext extends Context {
     }
 
     @Override
-    public void setContextStyle() {
+    protected void setContextStyle() {
     }
 }

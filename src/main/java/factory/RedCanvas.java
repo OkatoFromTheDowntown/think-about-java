@@ -25,7 +25,7 @@ class TheBold2DContext extends The2DContext {
     }
 
     @Override
-    public void setContextStyle() {
+    protected void setContextStyle() {
         this.context.setContextStyle();
         System.out.println("ctx.lineWidth=10;");
     }
@@ -40,7 +40,7 @@ class TheRed2DContext extends The2DContext {
     }
 
     @Override
-    public void setContextStyle() {
+    protected void setContextStyle() {
         this.context.setContextStyle();
         System.out.println("ctx.strokeStyle=\"#ff0000\";");
     }
@@ -54,7 +54,7 @@ class TheRed3DContext extends The3DContext {
     }
 
     @Override
-    public void setContextStyle() {
+    protected void setContextStyle() {
         this.context.setContextStyle();
         System.out.println("ctx.strokeStyle=\"#ff0000\";");
     }
