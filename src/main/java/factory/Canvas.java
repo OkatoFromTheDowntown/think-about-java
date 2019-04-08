@@ -15,5 +15,5 @@ public abstract class Canvas {
         System.out.println();
     }
 
-    public abstract Context getContext(String contextType);
+    protected abstract Context getContext(String contextType);
 }

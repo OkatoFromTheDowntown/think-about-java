@@ -3,7 +3,7 @@ package main.java.factory;
 public class RedCanvas extends Canvas {
 
     @Override
-    public Context getContext(String contextType) {
+    protected Context getContext(String contextType) {
         switch (contextType) {
             case "2d":
                 return new TheRed2DContext(new The2DContext());
