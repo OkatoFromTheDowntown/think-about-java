@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="ThinkAboutJava" default="clear" basedir=".">
+    <description>This is a simple ant-build file</description>
+
+    <!-- set global properties for this build -->
+    <property name="src" value="src"/>
+    <property name="build" value="build"/>
+    <property name="dist" value="dist"/>
+
+    <target name="init">
+        <!-- create the time stamp -->
+        <tstamp/>
+        <mkdir dir="${build}"/>
+    </target>
+    <target name="compile" depends="init" description="compile the source">
+        <!-- compile the Java code from ${src} into ${build} -->
+        <javac srcdir="${src}" destdir="${build}"/>
+    </target>
+    <target name="jar" depends="compile">
+        <!-- create the distribution directory -->
+        <mkdir dir="${dist}/lib"/>
+        <!-- put everything in ${build} into the ThinkAboutJava-${DSTAMP}.jar file -->
+        <jar jarfile="${dist}/lib/ThinkAboutJava-${DSTAMP}.jar" basedir="${build}"/>
+    </target>
+    <target name="runJar" depends="jar">
+        <ant target="clean"/>
+    </target>
+    <target name="clean" description="clean up">
+        <!-- delete the ${build} and ${dist} directory trees -->
+        <delete dir="${build}"/>
+        <delete dir="${dist}"/>
+        <delete dir="out"/>
+    </target>
+    <target name="rerun">
+        <ant target="clean"/>
+    </target>
+
+</project>
