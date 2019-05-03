@@ -6,33 +6,55 @@
     <property name="src" value="src"/>
     <property name="build" value="build"/>
     <property name="dist" value="dist"/>
+    <property name="lib" value="./WebContent/WEB-INF/lib"/>
 
-    <target name="init">
+    <!-- set dependencies-->
+    <path id="library">
+        <fileset dir="${lib}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <target name="information" description="print the build-in properties and environment settings">
+        <echo message="${basedir}"/>
+        <echo message="${ant.version}"/>
+        <echo message="${ant.file}"/>
+        <echo message="${ant.project.name}"/>
+        <echo message="${ant.java.version}"/>
+        <echo message="${os.name}"/>
+        <!-- <property environment="env" />-->
+        <!-- <echo message="${env.PATH}"></echo>-->
+    </target>
+
+    <target name="init" description="initialize the project">
         <!-- create the time stamp -->
         <tstamp/>
         <mkdir dir="${build}"/>
     </target>
+
     <target name="compile" depends="init" description="compile the source">
         <!-- compile the Java code from ${src} into ${build} -->
-        <javac srcdir="${src}" destdir="${build}"/>
+        <javac srcdir="${src}" destdir="${build}">
+            <classpath refid="library"/>
+        </javac>
     </target>
-    <target name="jar" depends="compile">
+
+    <target name="buildToJar" depends="compile" description="generate the distribution">
         <!-- create the distribution directory -->
-        <mkdir dir="${dist}/lib"/>
+        <mkdir dir="${dist}"/>
         <!-- put everything in ${build} into the ThinkAboutJava-${DSTAMP}.jar file -->
-        <jar jarfile="${dist}/lib/ThinkAboutJava-${DSTAMP}.jar" basedir="${build}"/>
+        <jar jarfile="${dist}/ThinkAboutJava-${DSTAMP}.jar" basedir="${build}"/>
     </target>
-    <target name="runJar" depends="jar">
-        <ant target="clean"/>
+
+    <target name="runJar" depends="buildToJar" description="run jar file">
+        <java classname="test.java.singleton.SingletonTest" classpath="${dist}/ThinkAboutJava-${DSTAMP}.jar"/>
     </target>
+
     <target name="clean" description="clean up">
         <!-- delete the ${build} and ${dist} directory trees -->
         <delete dir="${build}"/>
         <delete dir="${dist}"/>
         <delete dir="out"/>
-    </target>
-    <target name="rerun">
-        <ant target="clean"/>
     </target>
 
 </project>
