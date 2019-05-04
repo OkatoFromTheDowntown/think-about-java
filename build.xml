@@ -9,7 +9,7 @@
     <property name="lib" value="./WebContent/WEB-INF/lib"/>
 
     <!-- set dependencies-->
-    <path id="library">
+    <path id="library.dir">
         <fileset dir="${lib}">
             <include name="**/*.jar"/>
         </fileset>
@@ -35,7 +35,7 @@
     <target name="compile" depends="init" description="compile the source">
         <!-- compile the Java code from ${src} into ${build} -->
         <javac srcdir="${src}" destdir="${build}">
-            <classpath refid="library"/>
+            <classpath refid="library.dir"/>
         </javac>
     </target>
 
