@@ -3,4 +3,6 @@
 .vscode/
 out/
 build/
+.DS_Store
 dist/
+
