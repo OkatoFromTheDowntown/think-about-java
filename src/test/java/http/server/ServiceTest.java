@@ -18,6 +18,8 @@ public class ServiceTest {
         Passport passport4 = new Passport("wjd1", "123");
         Passport passport5 = new Passport("wjd", "a123");
 
+        Passport passportBuilder = Passport.builder().name("Okato").id("291239").build();
+
         Service service = new Service();
         service.execute(userInfo1);
         service.execute(userInfo2);
@@ -30,5 +32,7 @@ public class ServiceTest {
         service.execute(passport3);
         service.execute(passport4);
         service.execute(passport5);
+
+        service.execute(passportBuilder);
     }
 }

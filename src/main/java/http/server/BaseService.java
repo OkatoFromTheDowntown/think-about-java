@@ -50,7 +50,7 @@ public abstract class BaseService<T> {
 
     public void execute(T foo) {
         if (!validator(foo)) {
-            System.err.println("Validate check error!");
+            System.err.println("[Validate check error] " + foo.toString());
         } else {
             mainExecute(foo);
         }
