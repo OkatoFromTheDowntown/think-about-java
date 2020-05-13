@@ -29,6 +29,7 @@ Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Plugin 'vim-utils/vim-man'
 Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -68,7 +69,7 @@ set showmatch
 set mouse=
 set noruler
 set laststatus=2
-set listchars=space:␣,tab:→\ ,eol:↲,nbsp:·,trail:·,extends:>,precedes:<
+" set listchars=space:␣,tab:→\ ,eol:↲,nbsp:·,trail:·,extends:>,precedes:<
 
 let g:netrw_liststyle=3
 let g:netrw_winsize=70
