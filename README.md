@@ -1,6 +1,6 @@
 # think-about-java
 
-### Spring 依頼（最小限）
+### Spring dependencies（minium）
 
 - commons-logging
 - log4j
