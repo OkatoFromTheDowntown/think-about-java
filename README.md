@@ -1,6 +1,6 @@
 # think-about-java
 
-### Spring dependencies（minium）
+### Spring dependencies（minimum）
 
 - commons-logging
 - log4j
